@@ -7,23 +7,11 @@ function setup() {
   speed = random(223, 321)
   weight = random(30,52)
   bullet = createSprite(50, 200, 50, 50);
-}
-
-function draw() {
-  background(0, 0, 0);
   wall = createSprite(1200, 200, thickness, height/2);
   bullet.velocityX = speed;
-  function hasCollided(bullet, wall)
-  {
-    bulletRightEdge = bullet.x + bullet.x;
-    wallLeftEdge = wall.x
-    if(bulletRightEdge >= wallLeftEdge)
-    {
-      return true
-    }
-    return false;
-  }
-
+}
+function draw() {
+  background(0, 0, 0);
     if(hasCollided(bullet, wall))
     {
       bullet.velocityX = 0;
@@ -47,3 +35,14 @@ function draw() {
 
   drawSprites();
 }
+
+function hasCollided(bullet, wall)
+  {
+    bulletRightEdge = bullet.x + bullet.x;
+    wallLeftEdge = wall.x
+    if(bulletRightEdge >= wallLeftEdge)
+    {
+      return true
+    }
+    return false;
+  }
