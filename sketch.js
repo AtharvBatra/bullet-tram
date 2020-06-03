@@ -36,13 +36,11 @@ function draw() {
   drawSprites();
 }
 
-function hasCollided(lbullet, lwall)
-  {
-    lbulletRightEdge = bullet.x + bullet.x;
-    lwallLeftEdge = lEwall.x
-    if(lbulletRightEdge >= lwallLeftEdge)
-    {
-      return true
-    }
-    return false;
+function hasCollided(Ibullet, lwall)
+  bulletRightEdge=lbullet.x+lbullet.width; wallLeftEdge=lwall.x; 
+if(bulletRightEdge>=wallLeftEdge)
+  { 
+    return true 
   }
+return false;
+}
